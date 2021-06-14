@@ -11,7 +11,7 @@ if (url.searchParams.get('in') != null) {
 
 let footer = document.getElementById("credit");
 footer.innerHTML = doi;
-footer.href = "https://www.instagram.com/adamukti/";
+footer.href = "https://www.instagram.com/kifuatambassador/";
 
 function time() {
   var d = new Date();
@@ -99,7 +99,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
                           title: 'Oh iya aku mau nanya',
                           text: 'Ada sesuatu yang lagi kamu pingin ga?',
                           showDenyButton: true,
-                          confirmButtonText: `Ada Boss ?`,
+                          confirmButtonText: `Ada Boss`,
                           denyButtonText: `Ga ada ko`,
                         }).then((result) => {
                           /* Read more about isConfirmed, isDenied below */
@@ -116,14 +116,14 @@ document.querySelector(".tombol").addEventListener('click', function () {
                               }
                             }).then((result) => {
                               Swal.fire('Okey Boss', 'Nanti kita temenin ya :)', 'success').then((result) => {
-                                Swal.fire("See ya! Seamangaat 45 Boss ^^").then((result) => {
+                                Swal.fire("See ya! Semangaaaat 45 Boss ^^").then((result) => {
                                   selesai()
                                 });
                               })
                             })
                           } else if (result.isDenied) {
                             Swal.fire('Oh okedeh kalo ga ada').then((result) => {
-                              Swal.fire("See ya! Seamangaat 45 Boss ^^").then((result) => {
+                              Swal.fire("See ya! Semangaaaat 45 Boss ^^").then((result) => {
                                 selesai()
                               });
                             })
