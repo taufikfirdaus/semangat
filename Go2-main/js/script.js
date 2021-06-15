@@ -117,6 +117,8 @@ document.querySelector(".tombol").addEventListener('click', function () {
                                 }).then((result) => {
                                   Swal.fire('Okey Iky', 'terimakasih :)', 'success').then((result) => {
                                     Swal.fire("See ya! perasaan ini untukmu ^^").then((result) => {
+                                    });
+                                    Swal.fire('sorryy cuma praank :)').then((result) => {
                                       selesai()
                                     });
                                   })
@@ -124,27 +126,23 @@ document.querySelector(".tombol").addEventListener('click', function () {
                               } else if (result.isDenied) {
                                 Swal.fire('okedeh kalo ga mau :)').then((result) => {
                                   Swal.fire("See ya! mungkin belum jodoh ^^").then((result) => {
-                                    selesai()
                                   });
-                                })
-                              }
-                            })
+                                  Swal.fire('yaa praank :)').then((result) => {
+                                      selesai()
+                                    });
+                                  })
+                                }
+                              })
+                              })
                           })
+
                         })
-                        Swal.fire('ada yang mau aku omongin nih').then((result) => {
-                          Swal.fire({
-                            title: ' ',
-                            html: `tapi aku malu ngomonginnya, `,
-                            timer: 2000,
-                            timerProgressBar: true,
-                            showConfirmButton: false,
-                          })
-                        })
-                      }
-                    })
+                      })
                   }
                 })
-              })
-          }
-        })
-      });
+              }
+            })
+          })
+      }
+    })
+    });
