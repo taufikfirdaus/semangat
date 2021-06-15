@@ -50,7 +50,7 @@ function makan() {
 function selesai() {
   const teks = document.getElementById('teks');
   const btn = document.querySelector('.tombol');
-  teks.innerHTML = `sorry bree ${doi} <i
+  teks.innerHTML = `Semangat ${doi} <i
   class="fas fa-heart text-danger animate__animated animate__heartBeat animate__repeat-3"></i>`;
   btn.classList.add('d-none');
   teks.classList.remove('d-none');  
@@ -117,32 +117,28 @@ document.querySelector(".tombol").addEventListener('click', function () {
                                 }).then((result) => {
                                   Swal.fire('Okey Iky', 'terimakasih :)', 'success').then((result) => {
                                     Swal.fire("See ya! perasaan ini untukmu ^^").then((result) => {
-                                    });
-                                    // Swal.fire('sorryy cuma praank :)').then((result) => {
                                       selesai()
                                     });
                                   })
-                                // })
+                                })
                               } else if (result.isDenied) {
                                 Swal.fire('okedeh kalo ga mau :)').then((result) => {
                                   Swal.fire("See ya! mungkin belum jodoh ^^").then((result) => {
+                                    selesai()
                                   });
-                                  // Swal.fire('Serius nih ga mau :(').then((result) => {
-                                      selesai()
-                                    });
-                                  // })
-                                }
-                              })
-                              })
+                                })
+                              }
+                            })
                           })
-
                         })
+                        
                       })
-                  }
-                })
+                  })
               }
             })
-          })
-      }
-    })
-    });
+          }
+        })
+      })
+    }
+  })
+});
