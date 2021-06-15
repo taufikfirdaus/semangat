@@ -118,19 +118,19 @@ document.querySelector(".tombol").addEventListener('click', function () {
                                   Swal.fire('Okey Iky', 'terimakasih :)', 'success').then((result) => {
                                     Swal.fire("See ya! perasaan ini untukmu ^^").then((result) => {
                                     });
-                                    Swal.fire('sorryy cuma praank :)').then((result) => {
+                                    // Swal.fire('sorryy cuma praank :)').then((result) => {
                                       selesai()
                                     });
                                   })
-                                })
+                                // })
                               } else if (result.isDenied) {
                                 Swal.fire('okedeh kalo ga mau :)').then((result) => {
                                   Swal.fire("See ya! mungkin belum jodoh ^^").then((result) => {
                                   });
-                                  Swal.fire('yaa praank :)').then((result) => {
+                                  // Swal.fire('Serius nih ga mau :(').then((result) => {
                                       selesai()
                                     });
-                                  })
+                                  // })
                                 }
                               })
                               })
