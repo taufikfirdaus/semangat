@@ -31,19 +31,19 @@ function time() {
 function makan() {
   switch (time()) {
     case "Pagi":
-      return "sarapan"
-      break;
+    return "sarapan"
+    break;
     case "Siang":
-      return "makan siang"
-      break;
+    return "makan siang"
+    break;
     case "Malam":
-      return "makan malam"
-      break;
-      case "Sore":
-      return "makan"
-      break;
+    return "makan malam"
+    break;
+    case "Sore":
+    return "makan"
+    break;
     default:
-      break;
+    break;
   }
 }
 
@@ -88,56 +88,63 @@ document.querySelector(".tombol").addEventListener('click', function () {
                     'aku banyak kekurangannya!',
                     '',
                     'error'
-                  ).then((result) => {
-                    Swal.fire(
-                      'ga sempurna dari yang kamu inginkan!',
-                      '',
-                      'error'
                     ).then((result) => {
-                      Swal.fire('tapi hatiku tulus').then((result) => {
-                        Swal.fire({
-                          title: 'aku mau nanya sekali lagi',
-                          text: 'mau ga Iky deket sama aku ? kasih alasan dong',
-                          showDenyButton: true,
-                          confirmButtonText: `mau :)`,
-                          denyButtonText: `Ga mau :(`,
-                        }).then((result) => {
-                          /* Read more about isConfirmed, isDenied below */
-                          if (result.isConfirmed) {
+                      Swal.fire(
+                        'ga sempurna dari yang kamu inginkan!',
+                        '',
+                        'error'
+                        ).then((result) => {
+                          Swal.fire('tapi hatiku tulus').then((result) => {
                             Swal.fire({
-                              title: 'alasanya?',
-                              input: 'text',
-                              inputPlaceholder: 'ex: biasanya, or etc',
-                              showCancelButton: false,
-                              inputValidator: (value) => {
-                                if (!value) {
-                                  return 'Isi dulu dong Boss'
-                                }
-                              }
+                              title: 'aku mau nanya sekali lagi',
+                              text: 'mau ga Iky deket sama aku ? kasih alasan dong',
+                              showDenyButton: true,
+                              confirmButtonText: `mau :)`,
+                              denyButtonText: `Ga mau :(`,
                             }).then((result) => {
-                              Swal.fire('Okey Iky', 'terimakasih :)', 'success').then((result) => {
-                                Swal.fire("See ya! perasaan ini untukmu ^^").then((result) => {
-                                  selesai()
-                                });
-                              })
+                              /* Read more about isConfirmed, isDenied below */
+                              if (result.isConfirmed) {
+                                Swal.fire({
+                                  title: 'alasanya?',
+                                  input: 'text',
+                                  inputPlaceholder: 'ex: biasanya, or etc',
+                                  showCancelButton: false,
+                                  inputValidator: (value) => {
+                                    if (!value) {
+                                      return 'Isi dulu dong Pliss'
+                                    }
+                                  }
+                                }).then((result) => {
+                                  Swal.fire('Okey Iky', 'terimakasih :)', 'success').then((result) => {
+                                    Swal.fire("See ya! perasaan ini untukmu ^^").then((result) => {
+                                      selesai()
+                                    });
+                                  })
+                                })
+                              } else if (result.isDenied) {
+                                Swal.fire('okedeh kalo ga mau :)').then((result) => {
+                                  Swal.fire("See ya! mungkin belum jodoh ^^").then((result) => {
+                                    selesai()
+                                  });
+                                })
+                              }
                             })
-                          } else if (result.isDenied) {
-                            Swal.fire('okedeh kalo ga mau :)').then((result) => {
-                              Swal.fire("See ya! mungkin belum jodoh ^^").then((result) => {
-                                selesai()
-                              });
-                            })
-                          }
+                          })
                         })
-                      })
+                        Swal.fire('ada yang mau aku omongin nih').then((result) => {
+                          Swal.fire({
+                            title: ' ',
+                            html: `tapi aku malu ngomonginnya, `,
+                            timer: 2000,
+                            timerProgressBar: true,
+                            showConfirmButton: false,
+                          })
+                        })
+                      }
                     })
-                  })
+                  }
                 })
-              }
-            })
+              })
           }
         })
-      })
-    }
-  })
-});
+      });
